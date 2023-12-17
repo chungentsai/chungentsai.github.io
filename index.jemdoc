@@ -1,0 +1,33 @@
+# jemdoc: menu{MENU}{index.html}
+= Chung-En Tsai
+
+~~~
+{}{img_left}{./figures/avatar.jpg}{alt text}{WIDTHpx}{180px}{IMGLINKTARGET}
+Research Assistant\n
+Laboratory of Learning Theory and Optimization Methods\n
+[https://www.csie.ntu.edu.tw//?locale=en Department of Computer Science and Information Engineering]\n
+[https://www.ntu.edu.tw/english/ National Taiwan University]\n
+Taipei, Taiwan\n
+
+Office: Room 407, Der-Tien Hall (德田館), National Taiwan University\n
+Email: chungentsai at ntu dot edu dot tw
+~~~
+
+== About
+Hi, I am Chung-En Tsai (蔡仲恩).
+I am a research assistant in the laboratory of learning theory and optimization methods, advised by [https://sites.google.com/site/yenhuanli/home Prof. Yen-Huan Li].
+I received my B.S. from Department of Computer Science and Information Engineering, National Taiwan University in 2023.
+Previously, I have conducted research under the supervision of [http://www.math.ntu.edu.tw/entity_people/entity_people/21478 Prof. Chun-Hsiung Hsia] and [https://www.iis.sinica.edu.tw/~kmchung/ Prof. Kai-Min Chung].
+I was one of the ministers of the academic department of the 44th NTU CSIE Student Council.
+
+== Research
+I am interested in [https://en.wikipedia.org/wiki/Computational_learning_theory learning theory], [https://en.wikipedia.org/wiki/Mathematical_optimization optimization], [https://en.wikipedia.org/wiki/Dynamical_system dynamical systems], [https://en.wikipedia.org/wiki/Game_theory game theory], and related fields.
+I care about security issues related to machine learning.
+
+~~~
+"Far better an approximate answer to the /right/ question, which is often vague, than an /exact/ answer to the wrong question, which can always be made precise." (John Turkey, [https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-33/issue-1/The-Future-of-Data-Analysis/10.1214/aoms/1177704711.full "The Future of Data Analysis"], 1962, p. 13)
+~~~
+
+== Teaching
+- I am TA of the course [https://nol.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=922%20U4790&class=&dpt_code=9440&ser_no=65812&semester=112-1&lang=CH CSIE 5062: online convex optimization] in 2023 Fall.
+- I was TA of the course [https://nol.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=922%20U4550&class=&dpt_code=2500&ser_no=83695&semester=111-2&lang=CH CSIE 5002: prediction, learning, and games] in 2023 Spring.

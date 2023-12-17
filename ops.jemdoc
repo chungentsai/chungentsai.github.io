@@ -1,0 +1,41 @@
+# jemdoc: menu{MENU}{ops.html}
+= Online Portfolio Selection (OPS)
+
+OPS is a multi-round game between two players, say Investor and Market.
+Let $d$ be the number of investment alternatives and $T$ be the number of rounds.
+
+At the $t$-th round,
+. Investor chooses a portfolio $x_t\in\Delta_d\subseteq\mathbb{R}^d$.
+. Market announces a vector of price relatives $r_t\in[0,\infty)^d$.
+. Investor suffers a loss $f_t(x_t) := -\log\langle r_t,x_t\rangle$.
+
+The /regret/ is defined as $R_T := \sum_{t=1}^T f_t(x_t) - \min_{x\in\Delta_d} \sum_{t=1}^T f_t(x)$.
+
+== Current Efficiency-Regret Pareto Frontier
+
+~~~
+{}{img_left}{./assets/ops_pareto_frontier.png}{Current Efficiency-Regret Pareto Frontier for OPS}{600px}{}{}
+~~~
+
+The first paper using the term "Pareto frontier" in OPS is the work of [https://proceedings.mlr.press/v178/zimmert22a.html Zimmert et al. (2022)].
+
+== Existing OPS Algorithms
+
+The minimax-optimal regret is $\Theta(d\log T)$ ([https://pubsonline.informs.org/doi/abs/10.1287/moor.23.4.960 Ordentlich and Cover (1998)]).
+
+~~~
+{}{table}{Current OPS Algorithms}
+Algorithms  | Regret ($\tilde{O}$) | Per-round time ($\tilde{O}$) ||
+Universal Portfolio ([https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x Cover (1991)], [https://dl.acm.org/doi/abs/10.5555/944919.944942 Kalai and Vempala (2002)]) | $d\log T$ | $d^4T^{14}$ ||
+$\widetilde{\text{EG}}$ ([https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9965.00058 Helmbold et al. (1998)], [https://proceedings.mlr.press/v201/tsai23a.html Tsai et al. (2023a)]) | $d^{1/3}T^{2/3}$ | $d$ ||
+Barrier subgradient method ([https://link.springer.com/article/10.1007/s10107-010-0421-3 Nesterov (2011)]) | $\sqrt{dT}$ | $d$ ||
+Soft-Bayes ([http://proceedings.mlr.press/v76/orseau17a.html Orseau et al. (2017)]) | $\sqrt{dT}$ | $d$ ||
+LB-OMD ([https://proceedings.mlr.press/v201/tsai23a.html Tsai et al. (2023a)]) | $\sqrt{dT}$ | $d$ ||
+ADA-BARRONS ([https://proceedings.neurips.cc/paper/2018/hash/91c77393975889bd08f301c9e13a44b7-Abstract.html Lou et al. (2018)]) | $d^2\log^4 T$ | $d^{2.5}T$ ||
+LB-FTRL without linearized losses ([https://proceedings.mlr.press/v125/van-erven20a.html Van Erven et al. (2020)]) | $d\log^{d+1}T$ | $d^2T$ ||
+PAE + DONS ([https://proceedings.mlr.press/v178/mhammedi22b.html Mhammedi and Rakhlin (2022)]) | $d^2\log^5 T$ | $d^3$ ||
+BISONS ([https://proceedings.mlr.press/v178/zimmert22a.html Zimmert et al. (2022)]) | $d^2\log^2 T$ | $d^3$ ||
+VB-FTRL ([https://arxiv.org/abs/2209.13932 Jézéquel et al. (2022)]) | $d\log T$ | $d^2T$ ||
+Adaptive LB-FTRL ([https://arxiv.org/abs/2305.13946 Tsai et al. (2023b)]) | $d\log^2 T$ \~ $\sqrt{dT}$ | $d$ ||
+Optimistic LB-FTRL ([https://arxiv.org/abs/2305.13946 Tsai et al. (2023b)]) | $d\log T$ \~ $\sqrt{dT}$ | $d$ 
+~~~

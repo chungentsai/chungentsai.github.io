@@ -1,0 +1,45 @@
+# jemdoc: menu{MENU}{resources.html}
+= Resources
+
+== Research
+- [https://www.cs.virginia.edu/~robins/YouAndYourResearch.html You and Your Research] by Richard Hamming
+- [http://www.paulgraham.com/greatwork.html How To Do Great Work] by Paul Graham
+
+== Community
+- [https://www.let-all.com Learning Theory Alliance]
+
+== Talks
+- [https://simons.berkeley.edu/homepage  Simons Institute for the Theory of Computing]
+
+== Books
+- [https://link.springer.com/book/10.1007/978-3-319-91578-4 Lectures on Convex Optimization] by Yurii Nesterov
+- [https://link.springer.com/book/10.1007/978-1-4419-9467-7 Convex Analysis and Monotone Operator Theory in Hilbert Spaces] by Heinz H. Bauschke and Patrick L. Combettes
+- [https://www.amazon.com/Elements-Information-Theory-Telecommunications-Processing/dp/0471241954 Elements of Information Theory] by Thomas M. Cover
+- [https://www.cambridge.org/core/books/prediction-learning-and-games/A05C9F6ABC752FAB8954C885D0065C8F Prediction, Learning, and Games] by Nicolò Cesa-Bianchi and Gabor Lugosi
+- [https://arxiv.org/abs/1912.13213 A Modern Introduction to Online Learning] by Francesco Orabona
+- [https://link.springer.com/book/10.1007/978-3-030-39568-1 First-order and Stochastic Optimization Methods for Machine Learning] by Guanghui Lan
+- [https://theory.cs.princeton.edu/complexity/ Computational Complexity: A Modern Approach] by Sanjeev Arora and Boaz Barak
+- [https://press.princeton.edu/books/hardcover/9780691118802/the-princeton-companion-to-mathematics The Princeton Companion to Mathematics] edited by Timothy Gowers, June Barrow-Green, and Imre Leader
+- [https://arxiv.org/abs/1405.4980 Convex Optimization: Algorithms and Complexity] by Sébastien Bubeck
+- [https://www.nicolasboumal.net/book/ An Introduction to Optimization on Smooth Manifolds] by Nicolas Boumal
+- 数学之英文写作 by 汤涛 and 丁玖
+
+== Softwares
+- [https://wayback.cecm.sfu.ca/projects/ISC/ISCmain.html Inverse symbolic calculator]
+
+== Blogs
+- [https://www.offconvex.org off the convex path] by Sanjeev Arora, Nisheeth Vishnoi, and Nadav Cohen
+- [https://terrytao.wordpress.com What's new] by Terence Tao
+- [https://scottaaronson.blog Shtetl-Optimized] by Scott Aaronson
+- [https://gilkalai.wordpress.com Combinatorics and more] by Gil Kalai
+- [https://web.archive.org/web/20210123234450/https://blogs.princeton.edu/imabandit/ I'm a bandit] by Sébastien Bubeck
+- [https://lucatrevisan.wordpress.com in theory] by Luca Trevisan
+- [https://blog.computationalcomplexity.org Computational Complexity] by Lance Fortnow and William Gasarch
+- [https://windowsontheory.org Windows On Theory] by Boaz Barak
+- [https://rjlipton.wpcomstaging.com Gödel's Lost Letter and P=NP] by Dick Lipton and Ken Regan
+- [https://parameterfree.com Parameter-free Learning and Optimization Algorithms] by Francesco Orabona
+- [https://ccjou.wordpress.com 線代啟示錄] by ccjou
+- [https://differentialprivacy.org DifferentialPrivacy.org] by lots of people
+
+== Popular science articles
+- [https://www.quantamagazine.org Quantamagazine]

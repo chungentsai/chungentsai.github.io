@@ -1,0 +1,16 @@
+# jemdoc: menu{MENU}{pub.html}
+= Publications
+
+The papers below are classified by topics and sorted in chronological order.
+
+== Learning with the Logarithmic Loss
+
+. *Chung-En Tsai*, Hao-Chung Cheng, and Yen-Huan Li. Online self-concordant and relatively smooth minimization, with applications to online portfolio selection and learning quantum states. In /Proc. 34th Int. Conf. Algorithmic Learning Theory/ (ALT), 2023. \[[https://proceedings.mlr.press/v201/tsai23a.html paper], [https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=7c28a98e-a8a6-4d48-8fac-afa400289873&start=2249.869268 talk], [https://arxiv.org/abs/2210.00997 arXiv]\]
+. *Chung-En Tsai*, Hao-Chung Cheng, and Yen-Huan Li. Faster stochastic first-order method for maximum-likelihood quantum state tomography. In /Int. Conf. Quantum Information Processing/ (QIP), 2022. (poster) \[[https://arxiv.org/abs/2211.12880 arXiv]\]
+. *Chung-En Tsai*, Ying-Ting Lin, and Yen-Huan Li. Data-dependent bounds for online portfolio selection without Lipschitzness and smoothness. In /Conf. Neural Information Processing Systems/ (NeurIPS), 2023. (poster) \[[./assets/2023_neurips_poster.pdf poster], [https://openreview.net/forum?id=4iTAUsyisM OpenReview], [https://arxiv.org/abs/2305.13946 arXiv]\] 
+. *Chung-En Tsai*, Hao-Chung Cheng, and Yen-Huan Li. Fast minimization of expected logarithmic loss via stochastic dual averaging, 2023. \[[https://arxiv.org/abs/2311.02557 arXiv]\]
+
+
+== The Kuramoto Model
+
+. *Chung-En Tsai* and Chun-Hsiung Hsia. Synchronization of Kuramoto model beyond sinusoidal interactions. 2023.

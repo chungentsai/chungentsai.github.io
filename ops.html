@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Online Portfolio Selection (OPS)</title>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Chung-En Tsai</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="./cv/cv.pdf">CV</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="https://scholar.google.com/citations?user=j01SlvUAAAAJ&hl=en">Google&nbsp;Scholar</a></div>
+<div class="menu-item"><a href="publications.html">Publications</a></div>
+<div class="menu-item"><a href="ops.html" class="current">Online&nbsp;Portfolio&nbsp;Selection</a></div>
+<div class="menu-category">Others</div>
+<div class="menu-item"><a href="resources.html">Resources</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Online Portfolio Selection (OPS)</h1>
+</div>
+<p>OPS is a multi-round game between two players, say Investor and Market.
+Let \(d\) be the number of investment alternatives and \(T\) be the number of rounds.
+</p>
+<p>At the \(t\)-th round,
+</p>
+<ol>
+<li><p>Investor chooses a portfolio \(x_t\in\Delta_d\subseteq\mathbb{R}^d\).
+</p>
+</li>
+<li><p>Market announces a vector of price relatives \(r_t\in[0,\infty)^d\).
+</p>
+</li>
+<li><p>Investor suffers a loss \(f_t(x_t) := -\log\langle r_t,x_t\rangle\).
+</p>
+</li>
+</ol>
+<p>The <i>regret</i> is defined as \(R_T := \sum_{t=1}^T f_t(x_t) - \min_{x\in\Delta_d} \sum_{t=1}^T f_t(x)\).
+</p>
+<h2>Current Efficiency-Regret Pareto Frontier</h2>
+<table class="imgtable"><tr><td>
+<img src="./assets/ops_pareto_frontier.png" alt="Current Efficiency-Regret Pareto Frontier for OPS" width="600px" />&nbsp;</td>
+<td align="left"></td></tr></table>
+<p>The first paper using the term &ldquo;Pareto frontier&rdquo; in OPS is the work of <a href="https://proceedings.mlr.press/v178/zimmert22a.html" target=&ldquo;blank&rdquo;>Zimmert et al. (2022)</a>.
+</p>
+<h2>Existing OPS Algorithms</h2>
+<p>The minimax-optimal regret is \(\Theta(d\log T)\) (<a href="https://pubsonline.informs.org/doi/abs/10.1287/moor.23.4.960" target=&ldquo;blank&rdquo;>Ordentlich and Cover (1998)</a>).
+</p>
+<table id="Current OPS Algorithms">
+<tr class="r1"><td class="c1">Algorithms  </td><td class="c2"> Regret (\(\tilde{O}\)) </td><td class="c3"> Per-round time (\(\tilde{O}\)) </td></tr>
+<tr class="r2"><td class="c1">Universal Portfolio (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x" target=&ldquo;blank&rdquo;>Cover (1991)</a>, <a href="https://dl.acm.org/doi/abs/10.5555/944919.944942" target=&ldquo;blank&rdquo;>Kalai and Vempala (2002)</a>) </td><td class="c2"> \(d\log T\) </td><td class="c3"> \(d^4T^{14}\) </td></tr>
+<tr class="r3"><td class="c1">\(\widetilde{\text{EG}}\) (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9965.00058" target=&ldquo;blank&rdquo;>Helmbold et al. (1998)</a>, <a href="https://proceedings.mlr.press/v201/tsai23a.html" target=&ldquo;blank&rdquo;>Tsai et al. (2023a)</a>) </td><td class="c2"> \(d^{1/3}T^{2/3}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r4"><td class="c1">Barrier subgradient method (<a href="https://link.springer.com/article/10.1007/s10107-010-0421-3" target=&ldquo;blank&rdquo;>Nesterov (2011)</a>) </td><td class="c2"> \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r5"><td class="c1">Soft-Bayes (<a href="http://proceedings.mlr.press/v76/orseau17a.html" target=&ldquo;blank&rdquo;>Orseau et al. (2017)</a>) </td><td class="c2"> \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r6"><td class="c1">LB-OMD (<a href="https://proceedings.mlr.press/v201/tsai23a.html" target=&ldquo;blank&rdquo;>Tsai et al. (2023a)</a>) </td><td class="c2"> \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r7"><td class="c1">ADA-BARRONS (<a href="https://proceedings.neurips.cc/paper/2018/hash/91c77393975889bd08f301c9e13a44b7-Abstract.html" target=&ldquo;blank&rdquo;>Lou et al. (2018)</a>) </td><td class="c2"> \(d^2\log^4 T\) </td><td class="c3"> \(d^{2.5}T\) </td></tr>
+<tr class="r8"><td class="c1">LB-FTRL without linearized losses (<a href="https://proceedings.mlr.press/v125/van-erven20a.html" target=&ldquo;blank&rdquo;>Van Erven et al. (2020)</a>) </td><td class="c2"> \(d\log^{d+1}T\) </td><td class="c3"> \(d^2T\) </td></tr>
+<tr class="r9"><td class="c1">PAE + DONS (<a href="https://proceedings.mlr.press/v178/mhammedi22b.html" target=&ldquo;blank&rdquo;>Mhammedi and Rakhlin (2022)</a>) </td><td class="c2"> \(d^2\log^5 T\) </td><td class="c3"> \(d^3\) </td></tr>
+<tr class="r10"><td class="c1">BISONS (<a href="https://proceedings.mlr.press/v178/zimmert22a.html" target=&ldquo;blank&rdquo;>Zimmert et al. (2022)</a>) </td><td class="c2"> \(d^2\log^2 T\) </td><td class="c3"> \(d^3\) </td></tr>
+<tr class="r11"><td class="c1">VB-FTRL (<a href="https://arxiv.org/abs/2209.13932" target=&ldquo;blank&rdquo;>Jézéquel et al. (2022)</a>) </td><td class="c2"> \(d\log T\) </td><td class="c3"> \(d^2T\) </td></tr>
+<tr class="r12"><td class="c1">Adaptive LB-FTRL (<a href="https://arxiv.org/abs/2305.13946" target=&ldquo;blank&rdquo;>Tsai et al. (2023b)</a>) </td><td class="c2"> \(d\log^2 T\) ~ \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r13"><td class="c1">Optimistic LB-FTRL (<a href="https://arxiv.org/abs/2305.13946" target=&ldquo;blank&rdquo;>Tsai et al. (2023b)</a>) </td><td class="c2"> \(d\log T\) ~ \(\sqrt{dT}\) </td><td class="c3"> \(d\) 
+</td></tr></table>
+<div id="footer">
+<div id="footer-text">
+Page generated 2023-12-17 15:05:48 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>
