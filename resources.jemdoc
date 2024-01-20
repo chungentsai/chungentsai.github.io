@@ -12,16 +12,20 @@
 - [https://simons.berkeley.edu/homepage  Simons Institute for the Theory of Computing]
 
 == Books
-- [https://link.springer.com/book/10.1007/978-3-319-91578-4 Lectures on Convex Optimization] by Yurii Nesterov
-- [https://link.springer.com/book/10.1007/978-1-4419-9467-7 Convex Analysis and Monotone Operator Theory in Hilbert Spaces] by Heinz H. Bauschke and Patrick L. Combettes
-- [https://www.amazon.com/Elements-Information-Theory-Telecommunications-Processing/dp/0471241954 Elements of Information Theory] by Thomas M. Cover
 - [https://www.cambridge.org/core/books/prediction-learning-and-games/A05C9F6ABC752FAB8954C885D0065C8F Prediction, Learning, and Games] by Nicolò Cesa-Bianchi and Gabor Lugosi
+- [https://www.cambridge.org/core/books/bandit-algorithms/8E39FD004E6CE036680F90DD0C6F09FC Bandit Algorithms] by Tor Lattimore and Csaba Szepesvári
 - [https://arxiv.org/abs/1912.13213 A Modern Introduction to Online Learning] by Francesco Orabona
+- [https://link.springer.com/book/10.1007/978-3-319-91578-4 Lectures on Convex Optimization] by Yurii Nesterov
 - [https://link.springer.com/book/10.1007/978-3-030-39568-1 First-order and Stochastic Optimization Methods for Machine Learning] by Guanghui Lan
-- [https://theory.cs.princeton.edu/complexity/ Computational Complexity: A Modern Approach] by Sanjeev Arora and Boaz Barak
-- [https://press.princeton.edu/books/hardcover/9780691118802/the-princeton-companion-to-mathematics The Princeton Companion to Mathematics] edited by Timothy Gowers, June Barrow-Green, and Imre Leader
 - [https://arxiv.org/abs/1405.4980 Convex Optimization: Algorithms and Complexity] by Sébastien Bubeck
 - [https://www.nicolasboumal.net/book/ An Introduction to Optimization on Smooth Manifolds] by Nicolas Boumal
+- [https://link.springer.com/book/10.1007/978-1-4419-9467-7 Convex Analysis and Monotone Operator Theory in Hilbert Spaces] by Heinz H. Bauschke and Patrick L. Combettes
+- [https://theory.cs.princeton.edu/complexity/ Computational Complexity: A Modern Approach] by Sanjeev Arora and Boaz Barak
+- [https://press.princeton.edu/books/hardcover/9780691118802/the-princeton-companion-to-mathematics The Princeton Companion to Mathematics] edited by Timothy Gowers, June Barrow-Green, and Imre Leader
+- [https://www.amazon.com/Elements-Information-Theory-Telecommunications-Processing/dp/0471241954 Elements of Information Theory] by Thomas M. Cover
+- [https://arxiv.org/abs/1504.00233 Quantum Information Processing with Finite Resources: Mathematical Foundations] by Marco Tomamichel
+- [https://link.springer.com/book/10.1007/978-1-4612-0653-8 Matrix Analysis] by Rajendra Bhatia
+- [https://link.springer.com/book/10.1007/978-3-319-04150-6 Introduction to Matrix Analysis and Applications] by Fumio Hiai and Dénes Petz 
 - 数学之英文写作 by 汤涛 and 丁玖
 
 == Softwares
