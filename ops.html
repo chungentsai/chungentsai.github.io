@@ -5,7 +5,7 @@
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-<title>Online Portfolio Selection (OPS)</title>
+<title>Online Portfolio Selection</title>
 <!-- MathJax -->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
 </script>
@@ -32,25 +32,69 @@ MathJax.Hub.Config({
 </td>
 <td id="layout-content">
 <div id="toptitle">
-<h1>Online Portfolio Selection (OPS)</h1>
+<h1>Online Portfolio Selection</h1>
 </div>
-<p>OPS is a multi-round game between two players, say Investor and Market.
-Let \(d\) be the number of investment alternatives and \(T\) be the number of rounds.
+<div class="infoblock">
+<div class="blockcontent">
+<p>If you have any suggestions or comments about this page, please email me at chungentsai at ntu dot edu dot tw.
+Thank you!
 </p>
-<p>At the \(t\)-th round,
+</div></div>
+<h2>Introduction</h2>
+<p>Suppose that we are investing in a market with \(d\) stocks.
+But we do not have any information about the market.
+We don't know whether the prices follow any probability distributions.
+How should we distribute our money every day in order to make our wealth grow as much as possible?
+Online portfolio selection (OPS) provides a simple and clean framework to study the investment problem.
+</p>
+<p>OPS was proposed by <a href="https://en.wikipedia.org/wiki/Thomas_M._Cover" target=&ldquo;blank&rdquo;>Thomas M. Cover</a> thirty years ago (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x" target=&ldquo;blank&rdquo;>Cover (1991)</a>).
+OPS models the investment as a multi-round game between two players, named Investor and Market.
+The game proceeds as follows.
+</p>
+<p>On day \(t\),
 </p>
 <ol>
-<li><p>Investor chooses a portfolio \(x_t\in\Delta_d\subseteq\mathbb{R}^d\).
+<li><p>Investor chooses a portfolio \(x_t\in\Delta\subseteq\mathbb{R}^d\).
 </p>
 </li>
-<li><p>Market announces a vector of price relatives \(r_t\in[0,\infty)^d\).
+<li><p>Market (observes \(x_t\)) and announces a vector of price relatives \(r_t\in[0,\infty)^d\).
 </p>
 </li>
-<li><p>Investor suffers a loss \(f_t(x_t) := -\log\langle r_t,x_t\rangle\).
+<li><p>Investor's wealth grows by a ratio of \(\langle r_t, x_t\rangle\).
 </p>
 </li>
 </ol>
-<p>The <i>regret</i> is defined as \(R_T := \sum_{t=1}^T f_t(x_t) - \min_{x\in\Delta_d} \sum_{t=1}^T f_t(x)\).
+<p>In the game, \(\Delta\) is the set of probability vectors, and the portfolio \(x_t\) is the distribution of Investor's money.
+The \(i\)-th entry of the price relatives vector \(r_t\) is the ratio of the closing price to the opening price of the \(i\)-th stock on day \(t\).
+For example, suppose there are three stocks in the market.
+At the beginning of day \(1\), Investor decides to invest \(30\)% of their money in the first stock, \(20\)% in the second stock, and \(50\)% in the third stock.
+At the end of the day, the price of the first stock does not change; the price of the second stock grows by \(10\)%; the price of the third stock falls by \(20\)%.
+Using the notations in the above game, we will write \(d=3\), \(x_1=(0.3, 0.2, 0.5)\), and \(r_1 = (1, 1.1, 0.8)\).
+Investor's wealth grows by a ratio of \(\langle{r_1,x_1}\rangle = 1\times 0.3 + 1.1\times 0.2 + 0.8\times 0.5 = 0.92\).
+</p>
+<p>How should we measure Investor's performance?
+Note that Market chooses \(r_t\) after observing \(x_t\), so it is impossible for Investor to earn money in this game.
+Therefore, the &ldquo;absolute&rdquo; magnitude of Investor's wealth after \(T\) days is not a reasonable performance measure.
+Cover considered the ratio of the highest wealth obtained by some investment strategies to Investor's wealth.
+More precisely, he considered to design Investor's strategy to minimize the wealth ratio
+</p>
+<p style="text-align:center">
+\[
+    \frac{ \max_{x\in\Delta} \prod_{t=1}^T \langle r_t, x\rangle }{ \prod_{t=1}^T \langle r_t, x_t \rangle },
+\]
+</p><p>where the numerator is the highest possible wealth obtained by the so-called constantly rebalanced portfolios and the denominator is Investor's wealth.
+A question left here is: is minimizing this ratio a meaningful goal for Investor?
+</p>
+<p>In the literature, the above goal usually appears in an equivalent form.
+That is, minimizing the <i>regret</i>, which is the logarithm of the wealth ratio:
+</p>
+<p style="text-align:center">
+\[
+    R_T(r_1,\ldots,r_T) := \sum_{t=1}^T -\log\langle r_t, x_t \rangle - \min_{x\in\Delta} \sum_{t=1}^T -\log\langle r_t, x\rangle.
+\]
+</p><p>Besides being an investment problem, OPS is a classical problem in the field of online learning.
+For example, see Chapter 10 of <i><a href="https://www.cambridge.org/core/books/prediction-learning-and-games/A05C9F6ABC752FAB8954C885D0065C8F" target=&ldquo;blank&rdquo;>Prediction, Learning, and Games</a></i> by Cesa-Bianchi and Lugosi and Chapter 12 of <a href="https://arxiv.org/abs/1912.13213" target=&ldquo;blank&rdquo;>Orabona (2023)</a>.
+OPS algorithms can also be used to solve the Poisson inverse problem (<a href="https://ieeexplore.ieee.org/abstract/document/9053230" target=&ldquo;blank&rdquo;>Li (2020)</a>), which has applications in medical imaging or astronomical denoising.
 </p>
 <h2>Current Efficiency-Regret Pareto Frontier</h2>
 <table class="imgtable"><tr><td>
@@ -78,7 +122,7 @@ Let \(d\) be the number of investment alternatives and \(T\) be the number of ro
 </td></tr></table>
 <div id="footer">
 <div id="footer-text">
-Page generated 2024-01-20 16:18:40 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+Page generated 2024-01-24 00:22:57 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 </div>
 </div>
 </td>

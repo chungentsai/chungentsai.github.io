@@ -8,8 +8,8 @@ table#tlayout {
 
 body {
 	background: white;
-	font-family: Verdana, sans-serif;
-	font-size: 11pt;
+	font-family: Times, serif; /* Times, serif; Verdana, sans-serif; */
+	font-size: 12pt;
 	padding-bottom: 8px;
 	margin: 0;
 }
