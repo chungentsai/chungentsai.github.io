@@ -5,26 +5,19 @@ The papers below are classified by topics and sorted chronologically.
 
 == Learning and Optimization with the Logarithmic Loss
 
-. Online self-concordant and relatively smooth minimization, with applications to online portfolio selection and learning quantum states.\n
+. [https://proceedings.mlr.press/v201/tsai23a.html Online self-concordant and relatively smooth minimization, with applications to online portfolio selection and learning quantum states.]\n
     Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li.\n
-    In /Proc. 34th Int. Conf. Algorithmic Learning Theory/ (ALT), 2023.\n
-    ([https://proceedings.mlr.press/v201/tsai23a.html paper], [https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=7c28a98e-a8a6-4d48-8fac-afa400289873&start=2249.869268 talk], [https://arxiv.org/abs/2210.00997 arXiv])
-. Faster stochastic first-order method for maximum-likelihood quantum state tomography.\n
+    ALT 2023. ([https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=7c28a98e-a8a6-4d48-8fac-afa400289873&start=2249.869268 oral])
+. [https://arxiv.org/abs/2211.12880 Faster stochastic first-order method for maximum-likelihood quantum state tomography.]\n
     Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li.\n
-    In /Int. Conf. Quantum Information Processing/ (QIP), 2023. (poster)\n
-    ([https://arxiv.org/abs/2211.12880 arXiv])
-. Data-dependent bounds for online portfolio selection without Lipschitzness and smoothness.\n
+    QIP 2023. (poster)
+. [https://openreview.net/forum?id=4iTAUsyisM Data-dependent bounds for online portfolio selection without Lipschitzness and smoothness.]\n
     Chung-En Tsai, Ying-Ting Lin, and Yen-Huan Li.\n
-    In /Conf. Neural Information Processing Systems/ (NeurIPS), 2023. (poster)\n
-    ([./assets/2023_neurips_poster.pdf poster], [https://openreview.net/forum?id=4iTAUsyisM OpenReview], [https://arxiv.org/abs/2305.13946 arXiv])
-. Improved Dimension and Sample Size Scalability for Maximum-Likelihood State Tomography and Approximating PSD Matrix Permanents.\n
+    NeurIPS 2023. ([./assets/2023_neurips_poster.pdf poster])
+. [https://arxiv.org/abs/2311.02557 Fast minimization of expected logarithmic loss via stochastic dual averaging.]\n
     Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li.\n
-    In /Int. Conf. Quantum Inforamtion Processing/ (QIP), 2024. (poster)\n
-    ([./assets/2024_qip_poster.pdf poster])
-. Fast minimization of expected logarithmic loss via stochastic dual averaging.\n
-    Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li.\n
-    Accepted by /Int. Conf. Artificial Intelligence and Statistics/ (AISTATS), 2024. (poster)\n
-    ([https://arxiv.org/abs/2311.02557 arXiv])
+    QIP 2024. ([./assets/2024_qip_poster.pdf poster])\n
+    AISTATS 2024. (poster)
 
 
 == The Kuramoto Model
