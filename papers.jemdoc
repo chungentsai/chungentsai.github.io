@@ -1,7 +1,7 @@
 # jemdoc: menu{MENU}{papers.html}
 = Papers
 
-The papers below are classified by topics and sorted chronologically.
+Papers below are classified by topics and sorted chronologically.
 
 == Learning and Optimization with the Logarithmic Loss
 
@@ -17,7 +17,9 @@ The papers below are classified by topics and sorted chronologically.
 . [./papers/fast_minimization_of_expected_log_loss.pdf Fast minimization of expected logarithmic loss via stochastic dual averaging]\n
     Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
     QIP 2024 ([./assets/2024_qip_poster.pdf poster]); AISTATS 2024 (poster)
-
+. [./papers/computing_augustin_information_via_hybrid_geodesically_convex_optimization.pdf Computing Augustin information via hybrid geodesically convex optimization]\n
+    Guan-Ren Wang, Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
+    arXiv preprint 2024
 
 == The Kuramoto Model
 
