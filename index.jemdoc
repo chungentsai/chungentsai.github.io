@@ -2,7 +2,7 @@
 = Chung-En Tsai
 
 ~~~
-{}{img_left}{./figures/avatar.jpg}{alt text}{WIDTHpx}{180px}{IMGLINKTARGET}
+{}{img_left}{./figures/avatar.jpg}{Photo taken in Japan, July 2023.}{WIDTHpx}{180px}{IMGLINKTARGET}
 Research Assistant\n
 Laboratory of Learning Theory and Optimization Methods\n
 [https://www.csie.ntu.edu.tw//?locale=en Department of Computer Science and Information Engineering]\n
@@ -12,14 +12,16 @@ Office: Room 407, Der-Tien Hall (德田館), National Taiwan University\n
 Email: chungentsai at ntu dot edu dot tw
 ~~~
 
+(Photo taken in Japan, July 2023)
+
 == About
 Hi, I am Chung-En Tsai (蔡仲恩).
 I am a research assistant in the laboratory of learning theory and optimization methods.
 I am fortunate to be advised by [https://sites.google.com/site/yenhuanli/home Prof. Yen-Huan Li] and to collaborate with [https://www.ee.ntu.edu.tw/bio1.php?id=1080917 Prof. Hao-Chung Cheng].
-I received my B.S. in computer science and information engineering from National Taiwan University in 2023.
-Previously, I have conducted research under the supervision of [http://www.math.ntu.edu.tw/entity_people/entity_people/21478 Prof. Chun-Hsiung Hsia] and [https://www.iis.sinica.edu.tw/~kmchung/ Prof. Kai-Min Chung] in synchronization theory and computational complexity theory, respectively.
+I received my B.S. in computer science from National Taiwan University in 2023.
+Previously, I have worked in synchronization theory with [http://www.math.ntu.edu.tw/entity_people/entity_people/21478 Prof. Chun-Hsiung Hsia] and studied computational complexity theory with [https://www.iis.sinica.edu.tw/~kmchung/ Prof. Kai-Min Chung].
 
-    I am interested in [https://en.wikipedia.org/wiki/Computational_learning_theory learning theory], [https://en.wikipedia.org/wiki/Mathematical_optimization optimization], [https://en.wikipedia.org/wiki/Dynamical_system dynamical systems], [https://en.wikipedia.org/wiki/Numerical_analysis numerical analysis], and related fields.
+    I am interested in [https://en.wikipedia.org/wiki/Computational_learning_theory learning theory], [https://en.wikipedia.org/wiki/Mathematical_optimization continuous and discrete optimization], and [https://en.wikipedia.org/wiki/Numerical_analysis numerical analysis].
 
 == News
 - Our works on [./papers/data_dependent_bounds_for_ops.pdf data-dependent bounds for online portfolio selection] and [./papers/computing_augustin_information_via_hybrid_geodesically_convex_optimization.pdf minimizing convex and geodesically smooth functions] were accepted by [https://sites.google.com/view/wnopta/home NOPTA 2024] as poster presentations! Guan-Ren and I will present them at the workshop.
