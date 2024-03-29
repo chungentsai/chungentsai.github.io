@@ -3,6 +3,7 @@
 
 ~~~
 {}{img_left}{./figures/avatar.jpg}{Photo taken in Japan, July 2023.}{WIDTHpx}{180px}{IMGLINKTARGET}
+Tsai, Chung-En (蔡仲恩)\n
 Research Assistant\n
 Laboratory of Learning Theory and Optimization Methods\n
 [https://www.csie.ntu.edu.tw//?locale=en Department of Computer Science and Information Engineering]\n
@@ -12,19 +13,20 @@ Office: Room 407, Der-Tien Hall (德田館), National Taiwan University\n
 Email: chungentsai at ntu dot edu dot tw
 ~~~
 
-(Photo taken in Japan, July 2023)
+(Photo taken in Japan, Jul 2023)
 
 == About
-Hi, I am Chung-En Tsai (蔡仲恩).
-I am a research assistant in the laboratory of learning theory and optimization methods.
-I am fortunate to be advised by [https://sites.google.com/site/yenhuanli/home Prof. Yen-Huan Li] and to collaborate with [https://www.ee.ntu.edu.tw/bio1.php?id=1080917 Prof. Hao-Chung Cheng].
-I received my B.S. in computer science from National Taiwan University in 2023.
-Previously, I have worked in synchronization theory with [http://www.math.ntu.edu.tw/entity_people/entity_people/21478 Prof. Chun-Hsiung Hsia] and studied computational complexity theory with [https://www.iis.sinica.edu.tw/~kmchung/ Prof. Kai-Min Chung].
+Welcome to my website! My name is Chung-En.
+I'm a research assistant in computer science at National Taiwan University.
+I am fortunate to be advised by [https://sites.google.com/site/yenhuanli/home Prof. Yen-Huan Li] and to collaborate with [https://www.ee.ntu.edu.tw/bio1.php?id=1080917 Prof. Hao-Chung Cheng] since 2021.
+Previously, I have worked with [http://www.math.ntu.edu.tw/entity_people/entity_people/21478 Prof. Chun-Hsiung Hsia] and [https://www.iis.sinica.edu.tw/~kmchung/ Prof. Kai-Min Chung].
+I received my bachelor's degree in computer science from National Taiwan University in 2023.
 
-    I am interested in [https://en.wikipedia.org/wiki/Computational_learning_theory learning theory], [https://en.wikipedia.org/wiki/Mathematical_optimization continuous and discrete optimization], and [https://en.wikipedia.org/wiki/Numerical_analysis numerical analysis].
+I am broadly interested in [https://en.wikipedia.org/wiki/Computational_learning_theory learning theory], [https://en.wikipedia.org/wiki/Mathematical_optimization continuous and discrete optimization], and [https://en.wikipedia.org/wiki/Numerical_analysis numerical analysis].
+I am currently working in online learning and large-scale optimization with the logarithmic loss.
 
 == News
-- \[Mar 2024\] I was admitted to the direct doctorate program in computer science at ETH Zürich!
+- \[Mar 2024\] I was admitted to the [https://inf.ethz.ch/doctorate/direct-doctorate-computer-science.html direct doctorate program in computer science] at [https://ethz.ch/en.html ETH Zürich]!
 - \[Feb 2024\] Our works on [./papers/data_dependent_bounds_for_ops.pdf data-dependent bounds for online portfolio selection] and [./papers/computing_augustin_information_via_hybrid_geodesically_convex_optimization.pdf minimizing convex and geodesically smooth functions] were accepted by [https://sites.google.com/view/wnopta/home NOPTA 2024] as poster presentations! Guan-Ren and I will present them at the workshop.
 - \[Jan 2024\] Our work on [./papers/fast_minimization_of_expected_log_loss.pdf faster stochastic algorithms for minimizing expectations of logarithmic losses] was accepted by [http://aistats.org/aistats2024/ AISTATS 2024] as a poster presentation! I will present it at the conference.
 - \[Jan 2024\] I will be one of the TAs of the course [https://nol.ntu.edu.tw/nol/coursesearch/print_table.php?course_id=922%20U4500&class=&dpt_code=9220&ser_no=13993&semester=112-2&lang=CH CSIE5410: optimization algorithms] in 2024 Spring.
