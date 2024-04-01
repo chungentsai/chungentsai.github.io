@@ -13,7 +13,7 @@ Papers below are classified by topics and sorted chronologically.
     QIP 2023 (poster)
 . [./papers/data_dependent_bounds_for_ops.pdf Data-dependent bounds for online portfolio selection without Lipschitzness and smoothness]\n
     Chung-En Tsai, Ying-Ting Lin, and Yen-Huan Li\n
-    *NeurIPS 2023* ([./assets/2023_neurips_poster.pdf poster], [https://nips.cc/virtual/2023/poster/72840 introduction]); NOPTA 2024 ([./assets/2024_nopta_poster.pdf poster])
+    *NeurIPS 2023* ([./assets/2023_neurips_poster.pdf poster], [https://nips.cc/virtual/2023/poster/72840 video introduction]); NOPTA 2024 ([./assets/2024_nopta_poster.pdf poster])
 . [./papers/fast_minimization_of_expected_log_loss.pdf Fast minimization of expected logarithmic loss via stochastic dual averaging]\n
     Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
     QIP 2024 ([./assets/2024_qip_poster.pdf poster]); *AISTATS 2024* (poster)
@@ -21,8 +21,8 @@ Papers below are classified by topics and sorted chronologically.
     Guan-Ren Wang, Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
     NOPTA 2024 (poster)
 
-== The Kuramoto Model
+== Synchronization
 
-.  Synchronization of Kuramoto model beyond sinusoidal interactions\n
-    Chung-En Tsai and Chun-Hsiung Hsia\n
-    Annual Meeting of Taiwanese Mathematical Society 2024 (poster)\n
+.  [./papers/synchronization_of_strong_competition_kuramoto_model.pdf On the synchronization analysis of a strong competition Kuramoto model]\n
+    Chun-Hsiung Hsia and Chung-En Tsai\n
+    Annual Meeting of Taiwanese Mathematical Society 2024 ([./assets/2024_tms_poster.pdf poster])\n
