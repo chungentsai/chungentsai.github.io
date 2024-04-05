@@ -1,5 +1,27 @@
 /* Default css file for jemdoc. */
 
+
+@font-face {
+	font-family: "Lato";
+	src: local(Lato),
+		 url("./fonts/Lato/Lato-Regular.ttf") format('truetype');
+  }
+
+@font-face {
+	font-family: "Lato";
+	src: local(Lato),
+		 url("./fonts/Lato/Lato-Bold.ttf") format('truetype');
+	font-weight: bold;
+  }
+
+@font-face {
+	font-family: "Lato";
+	src: local(Lato),
+		 url("./fonts/Lato/Lato-Italic.ttf") format('truetype');
+	font-style: italic;
+  }
+
+
 table#tlayout {
 	border: none;
 	border-collapse: separate;
@@ -8,7 +30,7 @@ table#tlayout {
 
 body {
 	background: white;
-	font-family: Arial, sans-serif; /* Times, serif; Verdana, sans-serif; */
+	font-family: Lato, Arial; /* Times, serif; Verdana, sans-serif; Arial, sans-serif */
 	font-size: 12pt;
 	padding-bottom: 8px;
 	margin: 0;
