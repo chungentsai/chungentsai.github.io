@@ -26,6 +26,7 @@ I am broadly interested in machine learning theory, mathematical optimization, a
 I am currently working in online learning and large-scale optimization with the logarithmic loss.
 
 == News
+- \[Apr 2023\] Our work on [./papers/computing_augustin_information_via_hybrid_geodesically_convex_optimization.pdf minimizing convex and geodesically smooth functions] was accepted by [https://2024.ieee-isit.org/home ISIT 2024]! Guan-Ren will present it at the conference.
 - \[Mar 2024\] I was admitted to the [https://inf.ethz.ch/doctorate/direct-doctorate-computer-science.html direct doctorate program in computer science] at [https://ethz.ch/en.html ETH Zürich]!
 - \[Feb 2024\] Our works on [./papers/data_dependent_bounds_for_ops.pdf data-dependent bounds for online portfolio selection] and [./papers/computing_augustin_information_via_hybrid_geodesically_convex_optimization.pdf minimizing convex and geodesically smooth functions] were accepted by [https://sites.google.com/view/wnopta/home NOPTA 2024] as poster presentations! Guan-Ren and I will present them at the workshop.
 - \[Jan 2024\] Our work on [./papers/fast_minimization_of_expected_log_loss.pdf faster stochastic algorithms for minimizing expectations of logarithmic losses] was accepted by [http://aistats.org/aistats2024/ AISTATS 2024] as a poster presentation! I will present it at the conference.
