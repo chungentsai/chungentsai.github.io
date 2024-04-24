@@ -55,11 +55,12 @@ We don't know whether the prices follow any probability distributions.
 How should we distribute our money every day in order to make our wealth grow as much as possible?
 Online portfolio selection (OPS) provides a simple and clean framework to study the investment problem.
 </p>
-<p>OPS was proposed by <a href="https://en.wikipedia.org/wiki/Thomas_M._Cover" target=&ldquo;blank&rdquo;>Thomas M. Cover</a> thirty years ago (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x" target=&ldquo;blank&rdquo;>Cover (1991)</a>).
+<p>OPS was proposed by Thomas M. Cover thirty years ago [1].
 OPS models the investment as a multi-round game between two players, named Investor and Market.
 The game proceeds as follows.
 </p>
-<p>On day \(t\),
+<p><b>Protocol:</b>
+On day \(t\),
 </p>
 <ol>
 <li><p>Investor chooses a portfolio \(x_t\in\Delta\subseteq\mathbb{R}^d\).
@@ -101,36 +102,69 @@ That is, minimizing the <i>regret</i>, which is the logarithm of the wealth rati
     R_T(r_1,\ldots,r_T) := \sum_{t=1}^T -\log\langle r_t, x_t \rangle - \min_{x\in\Delta} \sum_{t=1}^T -\log\langle r_t, x\rangle.
 \]
 </p><p>Besides being an investment problem, OPS is a classical problem in the field of online learning.
-For example, see Chapter 10 of <i><a href="https://www.cambridge.org/core/books/prediction-learning-and-games/A05C9F6ABC752FAB8954C885D0065C8F" target=&ldquo;blank&rdquo;>Prediction, Learning, and Games</a></i> by Cesa-Bianchi and Lugosi and Chapter 12 of <a href="https://arxiv.org/abs/1912.13213" target=&ldquo;blank&rdquo;>Orabona (2023)</a>.
-OPS algorithms can also be used to solve the Poisson inverse problem (<a href="https://ieeexplore.ieee.org/abstract/document/9053230" target=&ldquo;blank&rdquo;>Li (2020)</a>), which has applications in medical imaging or astronomical denoising.
+For example, see Chapter 10 of <i>Prediction, Learning, and Games</i> [2] and Chapter 12 of Orabona's lecture notes [3].
+OPS algorithms can also be used to solve the Poisson inverse problem [4], which has applications in medical imaging or astronomical denoising.
 </p>
 <h2>Current Efficiency-Regret Pareto Frontier</h2>
 <table class="imgtable"><tr><td>
 <img src="./assets/ops_pareto_frontier.png" alt="Current Efficiency-Regret Pareto Frontier for OPS" width="600px" />&nbsp;</td>
 <td align="left"></td></tr></table>
-<p>The first paper using the term &ldquo;Pareto frontier&rdquo; in OPS is the work of <a href="https://proceedings.mlr.press/v178/zimmert22a.html" target=&ldquo;blank&rdquo;>Zimmert et al. (2022)</a>.
+<p>The first paper using the term &ldquo;Pareto frontier&rdquo; in OPS is the work of Zimmert et al. [5].
 </p>
 <h2>Existing OPS Algorithms</h2>
-<p>The minimax-optimal regret is \(\Theta(d\log T)\) (<a href="https://pubsonline.informs.org/doi/abs/10.1287/moor.23.4.960" target=&ldquo;blank&rdquo;>Ordentlich and Cover (1998)</a>).
+<p>The minimax-optimal regret is \(\Theta(d\log T)\) [6].
 </p>
 <table id="Current OPS Algorithms">
 <tr class="r1"><td class="c1">Algorithms  </td><td class="c2"> Regret (\(\tilde{O}\)) </td><td class="c3"> Per-round time (\(\tilde{O}\)) </td></tr>
-<tr class="r2"><td class="c1">Universal Portfolio (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x" target=&ldquo;blank&rdquo;>Cover (1991)</a>, <a href="https://dl.acm.org/doi/abs/10.5555/944919.944942" target=&ldquo;blank&rdquo;>Kalai and Vempala (2002)</a>) </td><td class="c2"> \(d\log T\) </td><td class="c3"> \(d^4T^{14}\) </td></tr>
-<tr class="r3"><td class="c1">\(\widetilde{\text{EG}}\) (<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9965.00058" target=&ldquo;blank&rdquo;>Helmbold et al. (1998)</a>, <a href="https://proceedings.mlr.press/v201/tsai23a.html" target=&ldquo;blank&rdquo;>Tsai et al. (2023a)</a>) </td><td class="c2"> \(d^{1/3}T^{2/3}\) </td><td class="c3"> \(d\) </td></tr>
-<tr class="r4"><td class="c1">Barrier subgradient method (<a href="https://link.springer.com/article/10.1007/s10107-010-0421-3" target=&ldquo;blank&rdquo;>Nesterov (2011)</a>) </td><td class="c2"> \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
-<tr class="r5"><td class="c1">Soft-Bayes (<a href="http://proceedings.mlr.press/v76/orseau17a.html" target=&ldquo;blank&rdquo;>Orseau et al. (2017)</a>) </td><td class="c2"> \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
-<tr class="r6"><td class="c1">LB-OMD (<a href="https://proceedings.mlr.press/v201/tsai23a.html" target=&ldquo;blank&rdquo;>Tsai et al. (2023a)</a>) </td><td class="c2"> \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
-<tr class="r7"><td class="c1">ADA-BARRONS (<a href="https://proceedings.neurips.cc/paper/2018/hash/91c77393975889bd08f301c9e13a44b7-Abstract.html" target=&ldquo;blank&rdquo;>Lou et al. (2018)</a>) </td><td class="c2"> \(d^2\log^4 T\) </td><td class="c3"> \(d^{2.5}T\) </td></tr>
-<tr class="r8"><td class="c1">LB-FTRL without linearized losses (<a href="https://proceedings.mlr.press/v125/van-erven20a.html" target=&ldquo;blank&rdquo;>Van Erven et al. (2020)</a>) </td><td class="c2"> \(d\log^{d+1}T\) </td><td class="c3"> \(d^2T\) </td></tr>
-<tr class="r9"><td class="c1">PAE + DONS (<a href="https://proceedings.mlr.press/v178/mhammedi22b.html" target=&ldquo;blank&rdquo;>Mhammedi and Rakhlin (2022)</a>) </td><td class="c2"> \(d^2\log^5 T\) </td><td class="c3"> \(d^3\) </td></tr>
-<tr class="r10"><td class="c1">BISONS (<a href="https://proceedings.mlr.press/v178/zimmert22a.html" target=&ldquo;blank&rdquo;>Zimmert et al. (2022)</a>) </td><td class="c2"> \(d^2\log^2 T\) </td><td class="c3"> \(d^3\) </td></tr>
-<tr class="r11"><td class="c1">VB-FTRL (<a href="https://arxiv.org/abs/2209.13932" target=&ldquo;blank&rdquo;>Jézéquel et al. (2022)</a>) </td><td class="c2"> \(d\log T\) </td><td class="c3"> \(d^2T\) </td></tr>
-<tr class="r12"><td class="c1">Adaptive LB-FTRL (<a href="https://arxiv.org/abs/2305.13946" target=&ldquo;blank&rdquo;>Tsai et al. (2023b)</a>) </td><td class="c2"> \(d\log^2 T\) ~ \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
-<tr class="r13"><td class="c1">Optimistic LB-FTRL (<a href="https://arxiv.org/abs/2305.13946" target=&ldquo;blank&rdquo;>Tsai et al. (2023b)</a>) </td><td class="c2"> \(d\log T\) ~ \(\sqrt{dT}\) </td><td class="c3"> \(d\) 
+<tr class="r2"><td class="c1">Universal Portfolio [1, 7] </td><td class="c2"> \(d\log T\) </td><td class="c3"> \(d^4T^{14}\) </td></tr>
+<tr class="r3"><td class="c1">\(\widetilde{\text{EG}}\) [8, 9] </td><td class="c2"> \(d^{1/3}T^{2/3}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r4"><td class="c1">Barrier subgradient method [10] </td><td class="c2"> \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r5"><td class="c1">Soft-Bayes [11] </td><td class="c2"> \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r6"><td class="c1">LB-OMD [9] </td><td class="c2"> \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r7"><td class="c1">ADA-BARRONS [12] </td><td class="c2"> \(d^2\log^4 T\) </td><td class="c3"> \(d^{2.5}T\) </td></tr>
+<tr class="r8"><td class="c1">LB-FTRL (without linearized losses) [13] </td><td class="c2"> \(d\log^{d+1}T\) </td><td class="c3"> \(d^2T\) </td></tr>
+<tr class="r9"><td class="c1">PAE + DONS [14] </td><td class="c2"> \(d^2\log^5 T\) </td><td class="c3"> \(d^3\) </td></tr>
+<tr class="r10"><td class="c1">BISONS [5] </td><td class="c2"> \(d^2\log^2 T\) </td><td class="c3"> \(d^3\) </td></tr>
+<tr class="r11"><td class="c1">VB-FTRL [15] </td><td class="c2"> \(d\log T\) </td><td class="c3"> \(d^2T\) </td></tr>
+<tr class="r12"><td class="c1">Adaptive LB-FTRL [16] </td><td class="c2"> \(d\log^2 T\) ~ \(\sqrt{dT}\) </td><td class="c3"> \(d\) </td></tr>
+<tr class="r13"><td class="c1">Optimistic LB-FTRL [16] </td><td class="c2"> \(d\log T\) ~ \(\sqrt{dT}\) </td><td class="c3"> \(d\) 
 </td></tr></table>
+<h2>References</h2>
+<p>[1] T. M. Cover. &ldquo;Universal portfolios.&rdquo; <i>Math. Financ.</i> 1991.
+</p>
+<p>[2] N. Cesa-Bianchi and G. Lugosi. <i>Prediction, Learning, and Games</i>. Cambridge University Press. 2006.
+</p>
+<p>[3] F. Orabona. &ldquo;A modern introduction to online learning.&rdquo; <i>arXiv preprint arXiv:1912.13213v6</i>. 2023.
+</p>
+<p>[4] Y.-H. Li. &ldquo;Online positron emission tomography by online portfolio selection.&rdquo; ICASSP 2020.
+</p>
+<p>[5] J. Zimmert, N. Agarwal, and S. Kale. &ldquo;Pushing the efficiency-regret Pareto frontier for online learning of portfolios and quantum states.&rdquo; COLT 2022.
+</p>
+<p>[6] E. Ordentlich and T. M. Cover. &ldquo;The cost of achieving the best portfolio in hindsight.&rdquo; <i>Math. Oper. Res.</i> 1998.
+</p>
+<p>[7] A. Kalai and S. Vempala. &ldquo;Efficient algorithms for universal portfolios.&rdquo; <i>J. Mach. Learn. Res.</i> 2002.
+</p>
+<p>[8] D. P. Helmbold, R. E. Schapire, Y. Singer, and M. K. Warmuth. &ldquo;On-line portfolio selection using multiplicative updates.&rdquo; <i>Math. Financ.</i> 1998.
+</p>
+<p>[9] C.-E. Tsai, H.-C. Cheng, and Y.-H. Li. &ldquo;Online self-concordant and relatively smooth minimization, with applications to online portfolio selection and learning quantum states.&rdquo; ALT 2023.
+</p>
+<p>[10] Y. Nesterov. &ldquo;Barrier subgradient method.&rdquo; <i>Math. Program.</i> 2010.
+</p>
+<p>[11] L. Orseau, T. Lattimore, and S. Legg. &ldquo;Soft-Bayes: prod for mixtures of experts with log-loss.&rdquo; ALT 2017.
+</p>
+<p>[12] H. Luo, C.-Y. Wei, and K. Zheng. &ldquo;Efficient online portfolio with logarithmic regret.&rdquo; NeurIPS 2018.
+</p>
+<p>[13] T. van Erven, D. van der Hoeven, W. Kotłowski, and W. M. Koolen. &ldquo;Open problem: fast and optimal online portfolio selection.&rdquo; COLT 2020.
+</p>
+<p>[14] Z. Mhammedi and A. Rakhlin. &ldquo;Damped online Newton step for portfolio selection.&rdquo; COLT 2022.
+</p>
+<p>[15] R. Jézéquel, D. M. Ostrovskii, and P. Gaillard. &ldquo;Efficient and near-optimal online portfolio selection.&rdquo; <i>arXiv preprint arXiv:2209.13932</i>. 2022.
+</p>
+<p>[16] C.-E. Tsai, Y.-T. Lin, and Y.-H. Li. &ldquo;Data-dependent bounds for online portfolio selection without Lipschitzness and smoothness.&rdquo; NeurIPS 2023.
+</p>
 <div id="footer">
 <div id="footer-text">
-Page generated 2024-04-20 00:10:13 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+Page generated 2024-04-24 22:51:17 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
 </div>
 </div>
 </td>

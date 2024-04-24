@@ -7,7 +7,7 @@ Papers below are classified by topics and sorted chronologically.
 
 . [./papers/online_self_concordant_and_relatively_smooth_minimization.pdf Online self-concordant and relatively smooth minimization, with applications to online portfolio selection and learning quantum states]\n
     Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
-    ALT 2023 ([https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=7c28a98e-a8a6-4d48-8fac-afa400289873&start=2249.869268 oral])
+    ALT 2023 ([https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=7c28a98e-a8a6-4d48-8fac-afa400289873&start=2249.869268 talk])
 . [./papers/faster_stochastic_method_for_mlqst.pdf Faster stochastic first-order method for maximum-likelihood quantum state tomography]\n
     Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
     QIP 2023 (poster)
@@ -16,7 +16,7 @@ Papers below are classified by topics and sorted chronologically.
     NeurIPS 2023 ([./assets/2023_neurips_poster.pdf poster], [https://nips.cc/virtual/2023/poster/72840 5-min. introduction]); NOPTA 2024 ([./assets/2024_nopta_poster.pdf poster])
 . [./papers/fast_minimization_of_expected_log_loss.pdf Fast minimization of expected logarithmic loss via stochastic dual averaging]\n
     Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
-    AISTATS 2024 (poster); QIP 2024 ([./assets/2024_qip_poster.pdf poster])
+    AISTATS 2024 ([./assets/2024_aistats_poster.pdf poster]); QIP 2024 ([./assets/2024_qip_poster.pdf poster])
 . [./papers/computing_augustin_information_via_hybrid_geodesically_convex_optimization.pdf Computing Augustin information via hybrid geodesically convex optimization]\n
     Guan-Ren Wang, Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
     ISIT 2024; NOPTA 2024 (poster)

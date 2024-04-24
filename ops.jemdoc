@@ -14,10 +14,11 @@ We don't know whether the prices follow any probability distributions.
 How should we distribute our money every day in order to make our wealth grow as much as possible?
 Online portfolio selection (OPS) provides a simple and clean framework to study the investment problem.
     
-OPS was proposed by [https://en.wikipedia.org/wiki/Thomas_M._Cover Thomas M. Cover] thirty years ago ([https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x Cover (1991)]).
+OPS was proposed by Thomas M. Cover thirty years ago \[1\].
 OPS models the investment as a multi-round game between two players, named Investor and Market.
 The game proceeds as follows.
 
+*Protocol:*
 On day $t$,
 . Investor chooses a portfolio $x_t\in\Delta\subseteq\mathbb{R}^d$.
 . Market (observes $x_t$) and announces a vector of price relatives $r_t\in[0,\infty)^d$.
@@ -49,8 +50,8 @@ That is, minimizing the /regret/, which is the logarithm of the wealth ratio:
 \)
 
 Besides being an investment problem, OPS is a classical problem in the field of online learning.
-For example, see Chapter 10 of /[https://www.cambridge.org/core/books/prediction-learning-and-games/A05C9F6ABC752FAB8954C885D0065C8F Prediction, Learning, and Games]/ by Cesa-Bianchi and Lugosi and Chapter 12 of [https://arxiv.org/abs/1912.13213 Orabona (2023)].
-OPS algorithms can also be used to solve the Poisson inverse problem ([https://ieeexplore.ieee.org/abstract/document/9053230 Li (2020)]), which has applications in medical imaging or astronomical denoising.
+For example, see Chapter 10 of /Prediction, Learning, and Games/ \[2\] and Chapter 12 of Orabona's lecture notes \[3\].
+OPS algorithms can also be used to solve the Poisson inverse problem \[4\], which has applications in medical imaging or astronomical denoising.
     
 == Current Efficiency-Regret Pareto Frontier
 
@@ -58,25 +59,59 @@ OPS algorithms can also be used to solve the Poisson inverse problem ([https://i
 {}{img_left}{./assets/ops_pareto_frontier.png}{Current Efficiency-Regret Pareto Frontier for OPS}{600px}{}{}
 ~~~
 
-The first paper using the term "Pareto frontier" in OPS is the work of [https://proceedings.mlr.press/v178/zimmert22a.html Zimmert et al. (2022)].
+The first paper using the term "Pareto frontier" in OPS is the work of Zimmert et al. \[5\].
 
 == Existing OPS Algorithms
 
-The minimax-optimal regret is $\Theta(d\log T)$ ([https://pubsonline.informs.org/doi/abs/10.1287/moor.23.4.960 Ordentlich and Cover (1998)]).
+The minimax-optimal regret is $\Theta(d\log T)$ \[6\].
 
 ~~~
 {}{table}{Current OPS Algorithms}
 Algorithms  | Regret ($\tilde{O}$) | Per-round time ($\tilde{O}$) ||
-Universal Portfolio ([https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9965.1991.tb00002.x Cover (1991)], [https://dl.acm.org/doi/abs/10.5555/944919.944942 Kalai and Vempala (2002)]) | $d\log T$ | $d^4T^{14}$ ||
-$\widetilde{\text{EG}}$ ([https://onlinelibrary.wiley.com/doi/abs/10.1111/1467-9965.00058 Helmbold et al. (1998)], [https://proceedings.mlr.press/v201/tsai23a.html Tsai et al. (2023a)]) | $d^{1/3}T^{2/3}$ | $d$ ||
-Barrier subgradient method ([https://link.springer.com/article/10.1007/s10107-010-0421-3 Nesterov (2011)]) | $\sqrt{dT}$ | $d$ ||
-Soft-Bayes ([http://proceedings.mlr.press/v76/orseau17a.html Orseau et al. (2017)]) | $\sqrt{dT}$ | $d$ ||
-LB-OMD ([https://proceedings.mlr.press/v201/tsai23a.html Tsai et al. (2023a)]) | $\sqrt{dT}$ | $d$ ||
-ADA-BARRONS ([https://proceedings.neurips.cc/paper/2018/hash/91c77393975889bd08f301c9e13a44b7-Abstract.html Lou et al. (2018)]) | $d^2\log^4 T$ | $d^{2.5}T$ ||
-LB-FTRL without linearized losses ([https://proceedings.mlr.press/v125/van-erven20a.html Van Erven et al. (2020)]) | $d\log^{d+1}T$ | $d^2T$ ||
-PAE + DONS ([https://proceedings.mlr.press/v178/mhammedi22b.html Mhammedi and Rakhlin (2022)]) | $d^2\log^5 T$ | $d^3$ ||
-BISONS ([https://proceedings.mlr.press/v178/zimmert22a.html Zimmert et al. (2022)]) | $d^2\log^2 T$ | $d^3$ ||
-VB-FTRL ([https://arxiv.org/abs/2209.13932 Jézéquel et al. (2022)]) | $d\log T$ | $d^2T$ ||
-Adaptive LB-FTRL ([https://arxiv.org/abs/2305.13946 Tsai et al. (2023b)]) | $d\log^2 T$ \~ $\sqrt{dT}$ | $d$ ||
-Optimistic LB-FTRL ([https://arxiv.org/abs/2305.13946 Tsai et al. (2023b)]) | $d\log T$ \~ $\sqrt{dT}$ | $d$ 
+Universal Portfolio \[1, 7\] | $d\log T$ | $d^4T^{14}$ ||
+$\widetilde{\text{EG}}$ \[8, 9\] | $d^{1/3}T^{2/3}$ | $d$ ||
+Barrier subgradient method \[10\] | $\sqrt{dT}$ | $d$ ||
+Soft-Bayes \[11\] | $\sqrt{dT}$ | $d$ ||
+LB-OMD \[9\] | $\sqrt{dT}$ | $d$ ||
+ADA-BARRONS \[12\] | $d^2\log^4 T$ | $d^{2.5}T$ ||
+LB-FTRL (without linearized losses) \[13\] | $d\log^{d+1}T$ | $d^2T$ ||
+PAE + DONS \[14\] | $d^2\log^5 T$ | $d^3$ ||
+BISONS \[5\] | $d^2\log^2 T$ | $d^3$ ||
+VB-FTRL \[15\] | $d\log T$ | $d^2T$ ||
+Adaptive LB-FTRL \[16\] | $d\log^2 T$ \~ $\sqrt{dT}$ | $d$ ||
+Optimistic LB-FTRL \[16\] | $d\log T$ \~ $\sqrt{dT}$ | $d$ 
 ~~~
+
+== References
+\[1\] T. M. Cover. "Universal portfolios." /Math. Financ./ 1991.
+
+\[2\] N. Cesa-Bianchi and G. Lugosi. /Prediction, Learning, and Games/. Cambridge University Press. 2006.
+
+\[3\] F. Orabona. "A modern introduction to online learning." /arXiv preprint arXiv:1912.13213v6/. 2023.
+
+\[4\] Y.-H. Li. "Online positron emission tomography by online portfolio selection." ICASSP 2020.
+
+\[5\] J. Zimmert, N. Agarwal, and S. Kale. "Pushing the efficiency-regret Pareto frontier for online learning of portfolios and quantum states." COLT 2022.
+
+\[6\] E. Ordentlich and T. M. Cover. "The cost of achieving the best portfolio in hindsight." /Math. Oper. Res./ 1998.
+
+\[7\] A. Kalai and S. Vempala. "Efficient algorithms for universal portfolios." /J. Mach. Learn. Res./ 2002.
+
+\[8\] D. P. Helmbold, R. E. Schapire, Y. Singer, and M. K. Warmuth. "On-line portfolio selection using multiplicative updates." /Math. Financ./ 1998.
+
+\[9\] C.-E. Tsai, H.-C. Cheng, and Y.-H. Li. "Online self-concordant and relatively smooth minimization, with applications to online portfolio selection and learning quantum states." ALT 2023.
+
+\[10\] Y. Nesterov. "Barrier subgradient method." /Math. Program./ 2010.
+
+\[11\] L. Orseau, T. Lattimore, and S. Legg. "Soft-Bayes: prod for mixtures of experts with log-loss." ALT 2017.
+
+\[12\] H. Luo, C.-Y. Wei, and K. Zheng. "Efficient online portfolio with logarithmic regret." NeurIPS 2018.
+
+\[13\] T. van Erven, D. van der Hoeven, W. Kotłowski, and W. M. Koolen. "Open problem: fast and optimal online portfolio selection." COLT 2020.
+
+\[14\] Z. Mhammedi and A. Rakhlin. "Damped online Newton step for portfolio selection." COLT 2022.
+
+\[15\] R. Jézéquel, D. M. Ostrovskii, and P. Gaillard. "Efficient and near-optimal online portfolio selection." /arXiv preprint arXiv:2209.13932/. 2022.
+
+\[16\] C.-E. Tsai, Y.-T. Lin, and Y.-H. Li. "Data-dependent bounds for online portfolio selection without Lipschitzness and smoothness." NeurIPS 2023.
+
