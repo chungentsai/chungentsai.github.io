@@ -101,3 +101,14 @@
   span.highlight {
     background-color: #ffffd0;
   }
+
+
+  details > summary {
+    color: #1772d0;
+    cursor: pointer;
+  }
+
+  details > summary:hover {
+    color: #f09228;
+    cursor: pointer;
+  }
