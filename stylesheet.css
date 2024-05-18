@@ -32,13 +32,13 @@
   }
   
   a {
-    color: #1772d0;
+    color: #4373b5;
     text-decoration: none;
   }
   
   a:focus,
   a:hover {
-    color: #f09228;
+    color: #e09a60;
     text-decoration: none;
   }
   
@@ -104,11 +104,11 @@
 
 
   details > summary {
-    color: #1772d0;
+    color: #4373b5;
     cursor: pointer;
   }
 
   details > summary:hover {
-    color: #f09228;
+    color: #e09a60;
     cursor: pointer;
   }
