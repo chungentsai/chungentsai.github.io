@@ -1,0 +1,28 @@
+# jemdoc: menu{MENU}{papers.html}
+= Papers
+
+Papers below are classified by topics and sorted in the chronological order.
+
+== Learning and optimization with logarithmic losses
+
+. [https://arxiv.org/abs/2210.00997 Online self-concordant and relatively smooth minimization, with applications to online portfolio selection and learning quantum states]\n
+    Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
+    ALT 2023 ([https://proceedings.mlr.press/v201/tsai23a.html proceedings], [https://mediaweb.ap.panopto.com/Panopto/Pages/Viewer.aspx?id=7c28a98e-a8a6-4d48-8fac-afa400289873&start=2249.869268 talk])\n
+. [https://arxiv.org/abs/2211.12880 Faster stochastic first-order method for maximum-likelihood quantum state tomography]\n
+    Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
+    QIP 2023\n
+. [https://arxiv.org/abs/2305.13946 Data-dependent bounds for online portfolio selection without Lipschitzness and smoothness]\n
+    Chung-En Tsai, Ying-Ting Lin, and Yen-Huan Li\n
+    NeurIPS 2023 ([https://proceedings.neurips.cc/paper_files/paper/2023/hash/c6483c8a68083af3383f91ee0dc6db95-Abstract-Conference.html proceedings], [./assets/2023_neurips_poster.pdf poster], [https://nips.cc/virtual/2023/poster/72840 short intro.]); NOPTA 2024 ([./assets/2024_nopta_poster.pdf poster])
+. [https://arxiv.org/abs/2311.02557 Fast minimization of expected logarithmic loss via stochastic dual averaging]\n
+    Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
+    AISTATS 2024 ([https://proceedings.mlr.press/v238/tsai24a.html proceedings], [./assets/2024_aistats_poster.pdf poster]); QIP 2024 ([./assets/2024_qip_poster.pdf poster])
+. [https://arxiv.org/abs/2402.02731 Computing Augustin information via hybrid geodesically convex optimization]\n
+    Guan-Ren Wang, Chung-En Tsai, Hao-Chung Cheng, and Yen-Huan Li\n
+    ISIT 2024; NOPTA 2024
+
+== Synchronization theory
+
+.  [https://arxiv.org/abs/2404.01000 On the synchronization analysis of a strong competition Kuramoto model]\n
+    Chun-Hsiung Hsia and Chung-En Tsai (alphabetical order)\n
+    Annual Meeting of the Taiwanese Mathematical Society 2024 ([./assets/2024_tms_poster.pdf poster])

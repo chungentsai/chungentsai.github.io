@@ -1,24 +1,37 @@
 /* Default css file for jemdoc. */
 
 
-@font-face {
-	font-family: "Lato";
-	src: local(Lato),
-		 url("./fonts/Lato/Lato-Regular.ttf") format('truetype');
+  /* latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Lato Italic'), local('Lato-Italic'), url("./fonts/Lato/Lato-Italic.ttf") format('truetype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
-@font-face {
-	font-family: "Lato";
-	src: local(Lato),
-		 url("./fonts/Lato/Lato-Bold.ttf") format('truetype');
-	font-weight: bold;
+  @font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url("./fonts/Lato/Lato-BoldItalic.ttf") format('truetype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
-@font-face {
-	font-family: "Lato";
-	src: local(Lato),
-		 url("./fonts/Lato/Lato-Italic.ttf") format('truetype');
-	font-style: italic;
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url("./fonts/Lato/Lato-Regular.ttf") format('truetype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url("./fonts/Lato/Lato-Bold.ttf") format('truetype');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 
 
@@ -30,7 +43,7 @@ table#tlayout {
 
 body {
 	background: white;
-	font-family: Times, Arial; /* Times, serif; Verdana, sans-serif; Arial, sans-serif */
+	font-family: Lato, Times, Arial; /* Times, serif; Verdana, sans-serif; Arial, sans-serif */
 	font-size: 12pt;
 	padding-bottom: 8px;
 	margin: 0;
@@ -40,8 +53,8 @@ body {
 	background: #f6f6f6;
 	border: 1px solid #dddddd;
 	padding-top: 0.5em;
-	padding-left: 8px;
-	padding-right: 8px;
+	padding-left: 16px;
+	padding-right: 32px;
 	font-size: 1.0em;
 	width: auto;
 	white-space: nowrap;

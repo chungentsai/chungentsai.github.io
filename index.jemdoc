@@ -1,0 +1,28 @@
+# jemdoc: menu{MENU}{index.html}
+= Chung-En Tsai
+
+~~~
+{}{img_left}{./figures/avatar.jpg}{Photo taken in Japan, July 2023.}{WIDTHpx}{180px}{IMGLINKTARGET}
+Tsai, Chung-En (蔡仲恩)\n
+Research Assistant\n
+Laboratory of Learning Theory and Optimization Methods\n
+[https://www.csie.ntu.edu.tw//?locale=en Department of Computer Science and Information Engineering]\n
+[https://www.ntu.edu.tw/english/ National Taiwan University]\n
+
+Office: Room 407, Der-Tien Hall (德田館), National Taiwan University\n
+Email: chungentsai at ntu dot edu dot tw
+~~~
+
+(ETH Zürich, 05.2024)
+
+== About
+
+Hi! My name is Chung-En. I'm a research assistant in computer science at [https://www.ntu.edu.tw/english/ National Taiwan University].
+I am fortunate to be advised by [https://sites.google.com/site/yenhuanli/home Prof. Yen-Huan Li] and to collaborate with [https://www.ee.ntu.edu.tw/bio1.php?id=1080917 Prof. Hao-Chung Cheng] since 2021.
+Previously, I have worked with [http://www.math.ntu.edu.tw/entity_people/entity_people/21478 Prof. Chun-Hsiung Hsia] and [https://www.iis.sinica.edu.tw/~kmchung/ Prof. Kai-Min Chung].
+I received my bachelor's degree in computer science from National Taiwan University in 2023.
+
+I will start my [https://inf.ethz.ch/doctorate/direct-doctorate-computer-science.html direct doctorate in computer science] at [https://ethz.ch/en.html ETH Zürich] this September.
+
+== Research Interests
+I'm interested in algorithms and complexity theories for machine learning, optimization, and related fields.
