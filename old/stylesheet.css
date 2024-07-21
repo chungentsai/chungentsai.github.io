@@ -38,7 +38,7 @@
   
   a:focus,
   a:hover {
-    color: #e09a60;
+    color: #c76747;
     text-decoration: none;
   }
   
@@ -48,13 +48,13 @@
   tr,
   p,
   a {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 15px;
   }
   
   strong {
     font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
   }
   
   h2 {
