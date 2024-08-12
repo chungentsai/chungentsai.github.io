@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>The Euler-Lagrange Equation and Hamilton's Equations</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-28CLZVJHRD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-28CLZVJHRD');
+</script>
+<!-- MathJax -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Chung-En Tsai</div>
+<div class="menu-item"><a href="index.html">Homepage</a></div>
+<div class="menu-item"><a href="./cv/cv.pdf">CV</a></div>
+<div class="menu-category">Research</div>
+<div class="menu-item"><a href="https://scholar.google.com/citations?user=j01SlvUAAAAJ&hl=en">Google&nbsp;Scholar</a></div>
+<div class="menu-item"><a href="./papers.html">Papers</a></div>
+<div class="menu-category">Others</div>
+<div class="menu-item"><a href="./notes.html">Notes</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>The Euler-Lagrange Equation and Hamilton's Equations</h1>
+</div>
+<h2>Problem Formulation</h2>
+<p>Let \(L(t, x,v)\) be a continuously differentiable function defined on \(\mathbb{R} \times \mathbb{R}^d \times \mathbb{R}^d\), which is called the Lagrangian.
+Fix \(T&gt;0\), an initial point \(x_0\in\mathbb{R}^d\), and an end point \(x_T\in\mathbb{R}^d\).
+Consider the following optimization problem:
+</p>
+<p style="text-align:center">
+\[
+    \min_{ x(\cdot) } J[x],\quad
+    J[x] := \int_0^T L( t, x(t), \dot{x}(t) )\ \text{d}t,
+\]
+</p><p>where the minimization is over all continuously differentiable curves \(x:[0,T]\to\mathbb{R}^d\) satisfying \(x(0)=x_0\) and \(x(T) = x_T\).
+</p>
+<h2>The Fundamental Lemma of the Calculus of Variations</h2>
+<p>Lemma 1 is called the fundamental lemma of the calculus of variations, and Lemma 2 is a similar statement.
+We will use Lemma 2 in the proof of the Euler-Lagrange equation.
+</p>
+<h3>Lemma 1</h3>
+<p>Let \(f:[a,b]\to\mathbb{R}^d\) be a continuous mapping.
+If
+</p>
+<p style="text-align:center">
+\[
+    \int_a^b \langle f(t),  h(t) \rangle \ \text{d}t = 0
+\]
+</p><p>for all continuously differentiable \(h:[a,b]\to\mathbb{R}^d\) satisfying \(h(a) = h(b) = 0\), then \(f=0\) on \([a,b]\).
+</p>
+<h3>Proof of Lemma 1</h3>
+<p>When \(d=1\), the proof of Lemma 1 can be found at <a href="https://en.wikipedia.org/wiki/Fundamental_lemma_of_the_calculus_of_variations" target=&ldquo;blank&rdquo;>wikipedia</a>.
+Observe that the \(d&gt;1\) case can be reduced to the \(d=1\) case.
+</p>
+<h3>Lemma 2</h3>
+<p>Let \(f:[a,b]\to\mathbb{R}^d\) be a continuous mapping.
+If
+</p>
+<p style="text-align:center">
+\[
+    \int_a^b \langle f(t),  h(t) \rangle \ \text{d}t = 0
+\]
+</p><p>for all continuous \(h:[a,b]\to\mathbb{R}^d\) satisfying \(\int_a^b h(t)\ \text{d}t = 0\), then \(f\) is a constant on \([a,b]\).
+</p>
+<h3>Proof of Lemma 2</h3>
+<p>It suffices to prove the \(d=1\) case.
+Assume \(f\) is not a constant.
+Let \(M = \max_{a\leq x\leq b} f(x)\) and \(m = \min_{a\leq x\leq b} f(x)\).
+Since \(f\) is not a constant, we have \(M&gt;m\).
+Define \(\tilde{f}(x) = f(x) - (M+m)/2\).
+By continuity, there exists an interval \([M_1,M_2]\) such that \(\tilde{f}(x) &gt; 0\) for \(x\in[M_1,M_2]\), and another interval \([m_1,m_2]\) such that \(\tilde{f}(x) &lt; 0\) for \(x\in[m_1,m_2]\).
+</p>
+<p>Define the normalized <a href="https://en.wikipedia.org/wiki/Bump_function" target=&ldquo;blank&rdquo;>bump function</a> by
+</p>
+<p style="text-align:center">
+\[
+    \Psi_{[c,d]}(x) = \begin{cases}
+    Z^{-1}\text{e}^{ \frac{-1}{(x-c)(d-x)} },&amp;\text{if }c&lt;x&lt;d\\
+    0,&amp;\text{otherwise}
+    \end{cases},
+\]
+</p><p>where \(Z\) is the normalizing constant such that \(\int_a^b \Psi_{[c,d]}(x)\ \text{d}x = 1\).
+Let \(h(x) = \Psi_{[M_1,M_2]}(x) - \Psi_{[m_1,m_2]}(x)\).
+It is clear that \(\int_a^b h(x)\ \text{d}x = 0\).
+Moreover, we have
+</p>
+<p style="text-align:center">
+\[
+    \int_a^b f(x)h(x)\ \text{d}x = \int_a^b \tilde{f}(x)h(x)\ \text{d}x
+    = \int_{M_1}^{M_2} \tilde{f}(x)\Psi_{[M_1,M_2]}(x)\ \text{d}x
+    - \int_{m_1}^{m_2} \tilde{f}(x)\Psi_{[m_1,m_2]}(x)\ \text{d}x &gt; 0,
+\]
+</p><p>which contradicts the assumption.
+This completes the proof.
+</p>
+<h2>The Euler-Lagrange Equation</h2>
+<h3>Statement</h3>
+<p>Let \(x^\star(\cdot)\) be a curve that achieves the minimum of the above optimization problem.
+Then, there exists a constant vector \(C\in\mathbb{R}^d\) such that
+</p>
+<p style="text-align:center">
+\[
+    \nabla_v L( t, x^\star(t), \dot{x}^\star(t) ) = \int_0^t \nabla_x L( s, x^\star(s), \dot{x}^\star(s) )\ \text{d}s + C,\quad\forall t\in[0,T],
+\]
+</p><p>which implies that
+</p>
+<p style="text-align:center">
+\[
+    \frac{\text{d}}{\text{d}t} \nabla_v L( t, x^\star(t), \dot{x}^\star(t) ) = \nabla_x L( t, x^\star(t), \dot{x}^\star(t) ),\quad\forall t\in[0,T].
+\]
+</p><h3>Proof</h3>
+<p>For any continuously differentiable curve \(\eta:[0,T] \to \mathbb{R}^d\) satisfying \(\eta(0) = \eta(T) = 0\), the function \(J[x^\star + \alpha \eta]\), as a function of \(\alpha\in\mathbb{R}\), achieves its minimum at \(\alpha=0\).
+This implies
+</p>
+<p style="text-align:center">
+\[
+    0 = \frac{\text{d}}{\text{d}\alpha} J[x^\star + \alpha \eta]\bigg|_{\alpha=0}
+    = \frac{\text{d}}{\text{d}\alpha}\int_0^T L( t, x^\star(t)+\alpha\eta(t), \dot{x}^\star(t)+\alpha\dot{\eta}(t) )\ \text{d}t\bigg|_{\alpha=0}.
+\]
+</p><p>By <a href="https://en.m.wikipedia.org/wiki/Leibniz_integral_rule" target=&ldquo;blank&rdquo;>the Leibniz integral rule</a>, we obtain
+</p>
+<p style="text-align:center">
+\[
+    \int_0^T \langle \nabla_x L(t, x^\star(t), \dot{x}^\star(t)), \eta(t) \rangle \ \text{d}t
+    + 
+    \int_0^T \langle \nabla_v L(t, x^\star(t), \dot{x}^\star(t)), \dot{\eta}(t) \rangle \ \text{d}t = 0.
+\]
+</p><p>By integration by parts, the first term equals
+</p>
+<p style="text-align:center">
+\[
+    \bigg\langle \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, \eta(t) \bigg\rangle \bigg|_{t=0}^{t=T}
+    - \int_0^T  \bigg\langle \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, \dot{\eta}(t) \bigg\rangle \ \text{d}t
+    = - \int_0^T  \bigg\langle \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, \dot{\eta}(t) \bigg\rangle \ \text{d}t,
+\]
+</p><p>where we use \(\eta(0) = \eta(T) = 0\) in the equality.
+Therefore, we obtain
+</p>
+<p style="text-align:center">
+\[
+    \int_0^T  \bigg\langle \nabla_v L(t, x^\star(t), \dot{x}^\star(t)) - \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, \dot{\eta}(t) \bigg\rangle \ \text{d}t = 0,
+\]
+</p><p>for all continuously differentiable curve \(\eta(\cdot)\) satisfying \(\eta(0)=\eta(T) = 0\).
+</p>
+<p>Finally, for any continuous function \(h:[0,T] \to \mathbb{R}^d\) satisfying \(\int_0^T h(t)\ \text{d}t = 0\), let \(\eta(t) := \int_0^t h(s)\ \text{d}s\).
+Note that \(\eta\) is continuously differentiable, \(\dot{\eta}=h\), and \(\eta(0) = \eta(T) = 0\).
+Therefore, we have
+</p>
+<p style="text-align:center">
+\[
+    \int_0^T  \bigg\langle \nabla_v L(t, x^\star(t), \dot{x}^\star(t)) - \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, h(t) \bigg\rangle \ \text{d}t = 0,
+\]
+</p><p>The theorem then follows from Lemma 2.
+</p>
+<h2>Hamilton's Equations</h2>
+<h3>Statement</h3>
+<p>Consider the above optimization problem.
+Assume that for any \(t\in\mathbb{R}\) and \(x,p\in\mathbb{R}^d\), we can solve \(p=\nabla_v L(t,x,v)\) for \(v\).
+Denote the solution by \(v(t,x,p)\).
+Assume that \(v:\mathbb{R}\times\mathbb{R}^d\times \mathbb{R}^d\to\mathbb{R}^d\) is continuously differentiable.
+Define the Hamiltonion by
+</p>
+<p style="text-align:center">
+\[
+    H(t,x,p) := \langle p, v(t,x,p) \rangle - L( t, x, v(t, x,p) ).
+\]
+</p><p>Let \(x^\star(\cdot)\) be the curve achieving the minimum, and define \(p^\star(t) := \nabla_v L(t, x^\star(t), \dot{x}^\star(t))\), which is called the momentum.
+Then, \((x^\star, p^\star)\) satisfies the following differential equations on \([0,T]\):
+</p>
+<p style="text-align:center">
+\[
+    \dot{x}^\star(t) = \nabla_p H( t, x^\star(t), p^\star(t) ),
+    \quad \dot{p}^\star(t) = -\nabla_x H( t, x^\star(t), p^\star(t) ).
+\]
+</p><h3>Proof</h3>
+<p>Note that by the Euler-Lagrange equation, \(p^\star\) is continuously differentiable.
+By a direct calculation and the definition of \(v(t,x,p)\), we have
+</p>
+<p style="text-align:center">
+\[
+    \nabla_x H(t,x,p) = -\nabla_x L(t,x, v(t,x,p)),
+    \quad
+    \nabla_p H(t,x,p) = v(t,x,p).
+\]
+</p><p>Hamilton's equations then follows from the Euler-Lagrange equation.
+</p>
+<h2>References</h2>
+<ol>
+<li><p>Lawrence C. Evan. <i>An Introduction to Mathematical Optimal Control Theory.</i> 2024.
+</p>
+</li>
+<li><p>Daniel Liberzon. <i>Calculus of Variations and Optimal Control Theory: A Concise Introduction.</i> Princeton University Press. 2012.</p>
+</li>
+</ol>
+<div id="footer">
+<div id="footer-text">
+Page generated 2024-08-13 00:36:10 CST, by <a href="https://github.com/wsshin/jemdoc_mathjax" target="blank">jemdoc+MathJax</a>.
+</div>
+</div>
+</td>
+</tr>
+</table>
+</body>
+</html>

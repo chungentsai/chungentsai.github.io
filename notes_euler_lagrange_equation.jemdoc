@@ -1,0 +1,152 @@
+# jemdoc: menu{MENU}{notes_euler_lagrange_equation.html}
+= The Euler-Lagrange Equation and Hamilton's Equations
+
+== Problem Formulation
+Let $L(t, x,v)$ be a continuously differentiable function defined on $\mathbb{R} \times \mathbb{R}^d \times \mathbb{R}^d$, which is called the Lagrangian.
+Fix $T>0$, an initial point $x_0\in\mathbb{R}^d$, and an end point $x_T\in\mathbb{R}^d$.
+Consider the following optimization problem:
+\(
+    \min_{ x(\cdot) } J[x],\quad
+    J[x] := \int_0^T L( t, x(t), \dot{x}(t) )\ \text{d}t,
+\)
+where the minimization is over all continuously differentiable curves $x:[0,T]\to\mathbb{R}^d$ satisfying $x(0)=x_0$ and $x(T) = x_T$.
+
+
+== The Fundamental Lemma of the Calculus of Variations
+
+Lemma 1 is called the fundamental lemma of the calculus of variations, and Lemma 2 is a similar statement.
+We will use Lemma 2 in the proof of the Euler-Lagrange equation.
+
+=== Lemma 1
+
+Let $f:[a,b]\to\mathbb{R}^d$ be a continuous mapping.
+If
+\(
+    \int_a^b \langle f(t),  h(t) \rangle \ \text{d}t = 0
+\)
+for all continuously differentiable $h:[a,b]\to\mathbb{R}^d$ satisfying $h(a) = h(b) = 0$, then $f=0$ on $[a,b]$.
+
+=== Proof of Lemma 1
+When $d=1$, the proof of Lemma 1 can be found at [https://en.wikipedia.org/wiki/Fundamental_lemma_of_the_calculus_of_variations wikipedia].
+Observe that the $d>1$ case can be reduced to the $d=1$ case.
+
+=== Lemma 2
+
+Let $f:[a,b]\to\mathbb{R}^d$ be a continuous mapping.
+If
+\(
+    \int_a^b \langle f(t),  h(t) \rangle \ \text{d}t = 0
+\)
+for all continuous $h:[a,b]\to\mathbb{R}^d$ satisfying $\int_a^b h(t)\ \text{d}t = 0$, then $f$ is a constant on $[a,b]$.
+
+
+=== Proof of Lemma 2
+It suffices to prove the $d=1$ case.
+Assume $f$ is not a constant.
+Let $M = \max_{a\leq x\leq b} f(x)$ and $m = \min_{a\leq x\leq b} f(x)$.
+Since $f$ is not a constant, we have $M>m$.
+Define $\tilde{f}(x) = f(x) - (M+m)/2$.
+By continuity, there exists an interval $[M_1,M_2]$ such that $\tilde{f}(x) > 0$ for $x\in[M_1,M_2]$, and another interval $[m_1,m_2]$ such that $\tilde{f}(x) < 0$ for $x\in[m_1,m_2]$.
+
+Define the normalized [https://en.wikipedia.org/wiki/Bump_function bump function] by
+\(
+    \Psi_{[c,d]}(x) = \begin{cases}
+    Z^{-1}\text{e}^{ \frac{-1}{(x-c)(d-x)} },&\text{if }c<x<d\\
+    0,&\text{otherwise}
+    \end{cases},
+\)
+where $Z$ is the normalizing constant such that $\int_a^b \Psi_{[c,d]}(x)\ \text{d}x = 1$.
+Let $h(x) = \Psi_{[M_1,M_2]}(x) - \Psi_{[m_1,m_2]}(x)$.
+It is clear that $\int_a^b h(x)\ \text{d}x = 0$.
+Moreover, we have
+\(
+    \int_a^b f(x)h(x)\ \text{d}x = \int_a^b \tilde{f}(x)h(x)\ \text{d}x
+    = \int_{M_1}^{M_2} \tilde{f}(x)\Psi_{[M_1,M_2]}(x)\ \text{d}x
+    - \int_{m_1}^{m_2} \tilde{f}(x)\Psi_{[m_1,m_2]}(x)\ \text{d}x > 0,
+\)
+which contradicts the assumption.
+This completes the proof.
+
+
+== The Euler-Lagrange Equation
+=== Statement
+
+Let $x^\star(\cdot)$ be a curve that achieves the minimum of the above optimization problem.
+Then, there exists a constant vector $C\in\mathbb{R}^d$ such that
+\(
+    \nabla_v L( t, x^\star(t), \dot{x}^\star(t) ) = \int_0^t \nabla_x L( s, x^\star(s), \dot{x}^\star(s) )\ \text{d}s + C,\quad\forall t\in[0,T],
+\)
+which implies that
+\(
+    \frac{\text{d}}{\text{d}t} \nabla_v L( t, x^\star(t), \dot{x}^\star(t) ) = \nabla_x L( t, x^\star(t), \dot{x}^\star(t) ),\quad\forall t\in[0,T].
+\)
+
+=== Proof
+
+For any continuously differentiable curve $\eta:[0,T] \to \mathbb{R}^d$ satisfying $\eta(0) = \eta(T) = 0$, the function $J[x^\star + \alpha \eta]$, as a function of $\alpha\in\mathbb{R}$, achieves its minimum at $\alpha=0$.
+This implies
+\(
+    0 = \frac{\text{d}}{\text{d}\alpha} J[x^\star + \alpha \eta]\bigg|_{\alpha=0}
+    = \frac{\text{d}}{\text{d}\alpha}\int_0^T L( t, x^\star(t)+\alpha\eta(t), \dot{x}^\star(t)+\alpha\dot{\eta}(t) )\ \text{d}t\bigg|_{\alpha=0}.
+\)
+By [https://en.m.wikipedia.org/wiki/Leibniz_integral_rule the Leibniz integral rule], we obtain
+\(
+    \int_0^T \langle \nabla_x L(t, x^\star(t), \dot{x}^\star(t)), \eta(t) \rangle \ \text{d}t
+    + 
+    \int_0^T \langle \nabla_v L(t, x^\star(t), \dot{x}^\star(t)), \dot{\eta}(t) \rangle \ \text{d}t = 0.
+\)
+By integration by parts, the first term equals
+\(
+    \bigg\langle \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, \eta(t) \bigg\rangle \bigg|_{t=0}^{t=T}
+    - \int_0^T  \bigg\langle \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, \dot{\eta}(t) \bigg\rangle \ \text{d}t
+    = - \int_0^T  \bigg\langle \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, \dot{\eta}(t) \bigg\rangle \ \text{d}t,
+\)
+where we use $\eta(0) = \eta(T) = 0$ in the equality.
+Therefore, we obtain
+\(
+    \int_0^T  \bigg\langle \nabla_v L(t, x^\star(t), \dot{x}^\star(t)) - \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, \dot{\eta}(t) \bigg\rangle \ \text{d}t = 0,
+\)
+for all continuously differentiable curve $\eta(\cdot)$ satisfying $\eta(0)=\eta(T) = 0$.
+
+
+Finally, for any continuous function $h:[0,T] \to \mathbb{R}^d$ satisfying $\int_0^T h(t)\ \text{d}t = 0$, let $\eta(t) := \int_0^t h(s)\ \text{d}s$.
+Note that $\eta$ is continuously differentiable, $\dot{\eta}=h$, and $\eta(0) = \eta(T) = 0$.
+Therefore, we have
+\(
+    \int_0^T  \bigg\langle \nabla_v L(t, x^\star(t), \dot{x}^\star(t)) - \int_0^t \nabla_x L(s, x^\star(s), \dot{x}^\star(s))\ \text{d}s, h(t) \bigg\rangle \ \text{d}t = 0,
+\)
+The theorem then follows from Lemma 2.
+
+== Hamilton's Equations
+
+=== Statement
+Consider the above optimization problem.
+Assume that for any $t\in\mathbb{R}$ and $x,p\in\mathbb{R}^d$, we can solve $p=\nabla_v L(t,x,v)$ for $v$.
+Denote the solution by $v(t,x,p)$.
+Assume that $v:\mathbb{R}\times\mathbb{R}^d\times \mathbb{R}^d\to\mathbb{R}^d$ is continuously differentiable.
+Define the Hamiltonion by
+\(
+    H(t,x,p) := \langle p, v(t,x,p) \rangle - L( t, x, v(t, x,p) ).
+\)
+
+Let $x^\star(\cdot)$ be the curve achieving the minimum, and define $p^\star(t) := \nabla_v L(t, x^\star(t), \dot{x}^\star(t))$, which is called the momentum.
+Then, $(x^\star, p^\star)$ satisfies the following differential equations on $[0,T]$:
+\(
+    \dot{x}^\star(t) = \nabla_p H( t, x^\star(t), p^\star(t) ),
+    \quad \dot{p}^\star(t) = -\nabla_x H( t, x^\star(t), p^\star(t) ).
+\)
+
+=== Proof
+Note that by the Euler-Lagrange equation, $p^\star$ is continuously differentiable.
+By a direct calculation and the definition of $v(t,x,p)$, we have
+\(
+    \nabla_x H(t,x,p) = -\nabla_x L(t,x, v(t,x,p)),
+    \quad
+    \nabla_p H(t,x,p) = v(t,x,p).
+\)
+Hamilton's equations then follows from the Euler-Lagrange equation.
+
+
+== References
+. Lawrence C. Evan. /An Introduction to Mathematical Optimal Control Theory./ 2024.
+. Daniel Liberzon. /Calculus of Variations and Optimal Control Theory: A Concise Introduction./ Princeton University Press. 2012.
