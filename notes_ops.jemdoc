@@ -56,7 +56,7 @@ OPS algorithms can also be used to solve the Poisson inverse problem \[4\], whic
 == Current Efficiency-Regret Pareto Frontier
 
 ~~~
-{}{img_left}{./assets/ops_pareto_frontier.png}{Current Efficiency-Regret Pareto Frontier for OPS}{600px}{}{}
+{}{img_left}{./figures/ops_pareto_frontier.png}{Current Efficiency-Regret Pareto Frontier for OPS}{600px}{}{}
 ~~~
 
 The first paper using the term "Pareto frontier" in OPS is the work of Zimmert et al. \[5\].
@@ -83,35 +83,20 @@ Optimistic LB-FTRL \[16\] | $d\log T$ \~ $\sqrt{dT}$ | $d$
 ~~~
 
 == References
-\[1\] T. M. Cover. "Universal portfolios." /Math. Financ./ 1991.
-
-\[2\] N. Cesa-Bianchi and G. Lugosi. /Prediction, Learning, and Games/. Cambridge University Press. 2006.
-
-\[3\] F. Orabona. "A modern introduction to online learning." /arXiv preprint arXiv:1912.13213v6/. 2023.
-
-\[4\] Y.-H. Li. "Online positron emission tomography by online portfolio selection." ICASSP 2020.
-
-\[5\] J. Zimmert, N. Agarwal, and S. Kale. "Pushing the efficiency-regret Pareto frontier for online learning of portfolios and quantum states." COLT 2022.
-
-\[6\] E. Ordentlich and T. M. Cover. "The cost of achieving the best portfolio in hindsight." /Math. Oper. Res./ 1998.
-
-\[7\] A. Kalai and S. Vempala. "Efficient algorithms for universal portfolios." /J. Mach. Learn. Res./ 2002.
-
-\[8\] D. P. Helmbold, R. E. Schapire, Y. Singer, and M. K. Warmuth. "On-line portfolio selection using multiplicative updates." /Math. Financ./ 1998.
-
-\[9\] C.-E. Tsai, H.-C. Cheng, and Y.-H. Li. "Online self-concordant and relatively smooth minimization, with applications to online portfolio selection and learning quantum states." ALT 2023.
-
-\[10\] Y. Nesterov. "Barrier subgradient method." /Math. Program./ 2010.
-
-\[11\] L. Orseau, T. Lattimore, and S. Legg. "Soft-Bayes: prod for mixtures of experts with log-loss." ALT 2017.
-
-\[12\] H. Luo, C.-Y. Wei, and K. Zheng. "Efficient online portfolio with logarithmic regret." NeurIPS 2018.
-
-\[13\] T. van Erven, D. van der Hoeven, W. Kotłowski, and W. M. Koolen. "Open problem: fast and optimal online portfolio selection." COLT 2020.
-
-\[14\] Z. Mhammedi and A. Rakhlin. "Damped online Newton step for portfolio selection." COLT 2022.
-
-\[15\] R. Jézéquel, D. M. Ostrovskii, and P. Gaillard. "Efficient and near-optimal online portfolio selection." /arXiv preprint arXiv:2209.13932/. 2022.
-
-\[16\] C.-E. Tsai, Y.-T. Lin, and Y.-H. Li. "Data-dependent bounds for online portfolio selection without Lipschitzness and smoothness." NeurIPS 2023.
+. T. M. Cover. "Universal portfolios." /Math. Financ./ 1991.
+. N. Cesa-Bianchi and G. Lugosi. /Prediction, Learning, and Games/. Cambridge University Press. 2006.
+. F. Orabona. "A modern introduction to online learning." /arXiv preprint arXiv:1912.13213v6/. 2023.
+. Y.-H. Li. "Online positron emission tomography by online portfolio selection." ICASSP 2020.
+. J. Zimmert, N. Agarwal, and S. Kale. "Pushing the efficiency-regret Pareto frontier for online learning of portfolios and quantum states." COLT 2022.
+. E. Ordentlich and T. M. Cover. "The cost of achieving the best portfolio in hindsight." /Math. Oper. Res./ 1998.
+. A. Kalai and S. Vempala. "Efficient algorithms for universal portfolios." /J. Mach. Learn. Res./ 2002.
+. D. P. Helmbold, R. E. Schapire, Y. Singer, and M. K. Warmuth. "On-line portfolio selection using multiplicative updates." /Math. Financ./ 1998.
+. C.-E. Tsai, H.-C. Cheng, and Y.-H. Li. "Online self-concordant and relatively smooth minimization, with applications to online portfolio selection and learning quantum states." ALT 2023.
+. Y. Nesterov. "Barrier subgradient method." /Math. Program./ 2010.
+. L. Orseau, T. Lattimore, and S. Legg. "Soft-Bayes: prod for mixtures of experts with log-loss." ALT 2017.
+. H. Luo, C.-Y. Wei, and K. Zheng. "Efficient online portfolio with logarithmic regret." NeurIPS 2018.
+. T. van Erven, D. van der Hoeven, W. Kotłowski, and W. M. Koolen. "Open problem: fast and optimal online portfolio selection." COLT 2020.
+. Z. Mhammedi and A. Rakhlin. "Damped online Newton step for portfolio selection." COLT 2022.
+. R. Jézéquel, D. M. Ostrovskii, and P. Gaillard. "Efficient and near-optimal online portfolio selection." /arXiv preprint arXiv:2209.13932/. 2022.
+. C.-E. Tsai, Y.-T. Lin, and Y.-H. Li. "Data-dependent bounds for online portfolio selection without Lipschitzness and smoothness." NeurIPS 2023.
 

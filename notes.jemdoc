@@ -1,4 +1,5 @@
 # jemdoc: menu{MENU}{notes.html}
 = Notes
 
+- [./notes_ops.html Online Portfolio Selection]
 - [./notes_euler_lagrange_equation.html The Euler-Lagrange Equation and Hamilton's Equations]
